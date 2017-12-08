@@ -242,7 +242,7 @@ public class StudentRegistrationActivity extends AppCompatActivity{
                 }
             }
         });
-    }
+    } 
 
     public void getData(){
         studName = studentName.getText().toString();
