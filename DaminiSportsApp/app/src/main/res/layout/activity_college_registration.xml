@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F8FF"
+    tools:context="shraddha.com.daminisportsapp.CollegeRegistrationActivity">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="2130dp">
+    <TextView
+        android:id="@+id/college_registration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/college_registration"
+        android:textColor="#0F0F0F"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="82dp"
+        tools:layout_editor_absoluteY="34dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="66dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="36dp" />
+
+    <EditText
+        android:id="@+id/teacher_name_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/mentor_name"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_below="@+id/teacher_name"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/teacher_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/name"
+        android:textColor="#0F0F0F"
+        android:textSize="20dp"
+        android:layout_below="@+id/college_registration"
+        android:layout_alignLeft="@+id/teacher_name_input"
+        android:layout_alignStart="@+id/teacher_name_input" />
+
+    <TextView
+        android:id="@+id/college_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:text="@string/select_colege_name"
+        android:textColor="#0F0F0F"
+        android:textSize="20dp"
+        android:layout_below="@+id/teacher_name_input"
+        android:layout_alignLeft="@+id/teacher_name"
+        android:layout_alignStart="@+id/teacher_name" />
+
+    <Spinner
+        android:id="@+id/college_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/college_name"
+        android:layout_marginTop="21dp"
+        android:layout_alignLeft="@+id/mobile_no"
+        android:layout_alignStart="@+id/mobile_no" />
+
+    <TextView
+        android:id="@+id/mobile_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="@string/mobile_no"
+        android:textColor="#0F0F0F"
+        android:textSize="20dp"
+        android:layout_below="@+id/college_spinner"
+        android:layout_alignLeft="@+id/college_name"
+        android:layout_alignStart="@+id/college_name" />
+
+    <EditText
+        android:id="@+id/mobile_no_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="phone"
+        android:layout_below="@+id/mobile_no"
+        android:layout_alignLeft="@+id/teacher_name_input"
+        android:layout_alignStart="@+id/teacher_name_input"
+        android:hint="@string/mobile_no"/>
+
+    <TextView
+        android:id="@+id/teacher_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/mobile_no"
+        android:layout_alignRight="@+id/mobile_no"
+        android:layout_below="@+id/mobile_no_input"
+        android:layout_marginTop="29dp"
+        android:text="@string/email"
+        android:textSize="20dp"
+        android:textColor="#0F0F0F"
+        android:layout_alignLeft="@+id/teacher_email_input"
+        android:layout_alignStart="@+id/teacher_email_input" />
+
+    <EditText
+        android:id="@+id/teacher_email_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/mobile_no_input"
+        android:layout_alignStart="@+id/mobile_no_input"
+        android:layout_below="@+id/teacher_email"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="@string/email"/>
+
+    <TextView
+        android:id="@+id/select_event"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/teacher_email_input"
+        android:layout_marginTop="22dp"
+        android:text="@string/select_event"
+        android:textColor="#0F0F0F"
+        android:textSize="20dp"
+        android:layout_alignLeft="@+id/teacher_email_input"
+        android:layout_alignStart="@+id/teacher_email_input" />
+
+    <TextView
+        android:id="@+id/indoor_games"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="@string/indoor_games"
+        android:textColor="#0F0F0F"
+        android:textSize="15dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_below="@+id/select_event"
+        android:layout_alignLeft="@+id/select_event"
+        android:layout_alignStart="@+id/select_event" />
+
+    <ListView
+        android:id="@+id/indoor_games_list"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_alignLeft="@+id/indoor_games"
+        android:layout_alignStart="@+id/indoor_games"
+        android:layout_below="@+id/indoor_games"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:id="@+id/outdoor_games"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textColor="#0F0F0F"
+        android:textSize="15dp"
+        android:text="@string/outdoor_games"
+        android:layout_below="@+id/indoor_games_list"
+        android:layout_alignLeft="@+id/indoor_games_list"
+        android:layout_alignStart="@+id/indoor_games_list" />
+
+    <ListView
+        android:id="@+id/outdoor_games_list"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/outdoor_games"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/outdoor_games"
+        android:layout_alignStart="@+id/outdoor_games" />
+
+    <TextView
+        android:id="@+id/athletics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="@string/athletics"
+        android:textColor="#0F0F0F"
+        android:textSize="15dp"
+        android:layout_below="@+id/outdoor_games_list"
+        android:layout_alignLeft="@+id/outdoor_games_list"
+        android:layout_alignStart="@+id/outdoor_games_list" />
+
+    <ListView
+        android:id="@+id/athletics_list"
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/athletics"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignLeft="@+id/athletics"
+        android:layout_alignStart="@+id/athletics" />
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit_button"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
+
+</ScrollView>

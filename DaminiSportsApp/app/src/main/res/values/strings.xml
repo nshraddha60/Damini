@@ -1,0 +1,123 @@
+<resources>
+    <string name="app_name">Damini2018</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="title">Damini 2018</string>
+    <string name="event_menu">Events</string>
+    <string name="schedule_menu">Schedule</string>
+    <string name="draws_menu">Draws</string>
+    <string name="photos_menu">Photos</string>
+    <string name="result_menu">Results</string>
+    <string name="award_menu">Awards</string>
+    <string name="about_damini_menu">About Damini</string>
+    <string name="app_info">Annual Inter Collegiate Sports Event</string>
+    <string name="register_button">REGISTER</string>
+    <string name="login_button">LOGIN</string>
+    <string name="college_registration">College Registration</string>
+    <string name="student_registartion">Student Registration</string>
+    <string name="mentor_name">Name of Sports Teacher</string>
+    <string name="name">Name</string>
+    <string name="select_colege_name">Select College</string>
+    <string name="mobile_no">Mobile No.</string>
+    <string name="email">Email</string>
+    <string name="blood_group">Blood Group</string>
+    <string name="select_event">Select Events</string>
+    <string name="submit_button">Submit</string>
+    <string name="clear_button">Clear</string>
+    <string name="indoor_games">In-door Games:</string>
+    <string name="outdoor_games">Out-door Games:</string>
+    <string name="athletics">Athletics</string>
+    <string name="host_name">Organized by BNCA</string>
+    <string name="mkss">MKSSS</string>
+    <string name="edit_button">Edit</string>
+
+    <string name="about_damini">About Damini</string>
+    <string name="damini_info"> \u2022 Maharshi Karve Stree Shikshan Samstha, (MKSSS), started the sports activity for professional college students, in the year 2006-07.  \n \u2022 It develops individuals by instilling positive character traits through athletic recreation, competition, and leadership. \n \u2022 Provides opportunities for individuals to develop Personal Honor in a disciplined team environment. \n \u2022 Sports are the best way to keep our students happy and enthusiastic. We teach our students to face the obstacles and hindrances coming in our day to day life through sports. \n \u2022 DAMINI sports activity is meant exclusively for college students under Maharshi Karve Stree Shikshan Samstha.  \n \u2022<b>Aims and Objectives</b> \n \u25BA Promotion of Exercises \n \u25BA Improve Physical and Mental Fitness \n \u25BA Increasing Stamina, Strength, and Flexibility \n \u25BA Spend leisure time for Sports \n \u25BA Create a feeling of affection for Sports \n \u25BA	Know the students from other Sister Institutes  \n \u2022 Every year one of the colleges of MKSSS hosts the “DAMINI” sports event. \n \u2022 17 college students take part in “DAMINI”. \n \u2022 There are 22 sports games we conduct. \n \u2022 In-Door and Out-Door competitions are conducted. \n \u2022 All the events are conducted at various locations of MKSSS. \n \u2022 The events are well planned and executed for 5 days. \n \u2022 The students are encouraged to participate “DAMINI”, which helps them to enhance their skills and participate in University and other intercollegiate competitions. \n \u2022 Many of our MKSSS students have reached and participated at India level competitions.</string>
+
+    <string name="about_mkss">About MKSS</string>
+    <string name="mkss_info">Maharshi Karve Stree Shikshan Samstha, (MKSSS), Pune: – the 121-years-old parent body has been committed to <b>“Empowerment of Women through Education”</b>. The Institution works relentlessly towards educating the women and thereby making them self-reliant. The Samstha was established in 1896 by the great visionary and social worker <b>Bharat Ratna Maharshi Dhondo Keshav Karve</b> provide shelter to destitute women. \n<b>The Founder of the Institution</b> \n Prof. D. K. Karve founded an Institution in a village called “Hingne” near Pune City. Earlier, the Institution was known as <b>“Hingne Stree Shikshan Samstha”</b> .Later, it was named as  <b>“Maharshi Karve Stree Shikshan Samstha”</b>. \n Prof. Karve founded this Institution with the objectives of upliftment, emancipation and education of women who formed a major section of the socially downtrodden. Maharshi Karve dedicated his whole life for this humanitarian cause with great determination and courage. For his sacrifice and dedicated social work and his contribution to the noble cause he was awarded <b>“Bharat Ratna”</b> the highest National Civilian Award. \n<b>Establishment of the Institution</b> \n On 14th June 1896, in the village ‘Hingne’ near Pune city, Maharshi Karve started a “Home for Widows”, along with a school for Widows, so that they become educated and self-reliant.  The “Home for Widows” was then named as ‘Hingne Stree Shikshan Samstha’ and the school was named as ‘Mahilashram High School’. \n<b>Development of the Institution</b> \n Maharshi Karve Stree Shikshan Samstha, Pune has branches all over Maharashtra in India and more than 26,000 girl students are learning in these institutions. Over the period of last 121 years, the Institution has grown like a banyan tree and at present it runs 62 educational and other units under its umbrella. These units are located at Pune, Satara, Wai, Ratnagiri, Nagpur, Kamshet and Vasai. All these units are meant exclusively for girls or women.  We also have hostel and medical facilities for students and working women and old age home for senior citizens. \n The Institution offers education from Kindergarten, Pre-Primary, Primary, Secondary, Higher Secondary schools to Higher Education Colleges. At present the Institution runs higher education units like, Engineering, Architecture, Management, Nursing, Fashion Technology, Vocational Training Institute, Laser Technology and Applications, Jewelry Design, etc. All these units strive hard to develop women into truly performing citizens in today’s globalization era.</string>
+
+    <string name="about_bnca">About BNCA</string>
+    <string name="bnca_info">MKSSS’s Dr. Bhanuben Nanavati College of Architecture for Women, founded in 1994 under the able leadership of Mr. Avinash Wardekar and Principal Dr Anurag Kashyap, with the generous donation of Rs. 90 lakhs given by Late Mr. Mahendrabhai Nanavati has a glorious historical background of Maharshi Karve Stree Shikshan Sanstha, Pune, founded in 1896, with the main <b>mission of uplifting the social, educational, financial and spiritual conditions of women and widows, making them confident and self reliant</b> . The institute is conceived as a multidisciplinary center of learning where architectural education is considered as a total personality development program. \n It offers Bachelor of Architecture B Arch), Master of Architecture (M Arch) and Doctorate programs (PhD) under Savitribai Phule Pune University. It was evolved in essence to ensure quality education and it has maintained this agenda to the present day. This institute has been established with a futuristic approach and idealism towards architectural education. \n Endowed with an excellent infrastructure, motivating faculty and a great tradition of empowering women through education for the last 114 years, we are committed to establish and enhance the importance and role of women in the challenging field of Architecture, Interior Design, Digital Architecture, Environmental Architecture and Landscape Architecture, as well as Doctorate in Architecture. We have always been on the fore front and in pace with the latest technological development. It is our dream, that keeps us motivated, to make our campus a hub of Architectural education and experimentation. We are therefore forever keen to introduce as many courses possible to our students. \n We also believe that, ‘life is larger than all other disciplines of education put together’ and our mission is ‘to produce excellent professionals, with a complete personality who can do justice to all aspects of life, besides developing into good human beings’. \n Our aim is to be one of the best colleges of Architecture in the world, by achieving the highest standards in Architectural Education, Research and other related activities besides uplifting the socio-economic, educational and spiritual status of women. \n Our motif here is to educate and prepare students to be creative and technically skilled professionals, qualified for productive careers in the field of architecture. The college works with a vision to prepare professional architects of highest integrity and entrepreneurial aptitude. It aims to give the student’s profile a competitive edge by making them specialist in various advanced fields, one of which is computer applications. Our college ensures that the students will not only excel in academics but also simultaneously tread a path to a total holistic growth.</string>
+    <string name="action_settings">Settings</string>
+
+
+    <string-array name="colleges_list">
+        <item>CCOEW</item>
+        <item>KBJIIT</item>
+        <item>HNIMR</item>
+        <item>SSCOA</item>
+        <item>BNCA</item>
+        <item>BTINE</item>
+        <item>MNVTI</item>
+        <item>PJCE</item>
+        <item>SOFT</item>
+        <item>BKAV</item>
+        <item>CCOEW-N</item>
+        <item>SSNCON</item>
+        <item>BCA-R</item>
+        <item>B.ED - R</item>
+        <item>BCA - W</item>
+        <item>BCA - S</item>
+    </string-array>
+
+    <string-array name="blood_groups">
+        <item>Not Known</item>
+        <item>A positive</item>
+        <item>A negative</item>
+        <item>B positive</item>
+        <item>B negative</item>
+        <item>O positive</item>
+        <item>O negative</item>
+        <item>AB positive</item>
+        <item>AB negative</item>
+
+    </string-array>
+
+    <string-array name="indoor_sports_list">
+        <item>Badminton</item>
+        <item>Carrom</item>
+        <item>Chess</item>
+        <item>PPT PRESENTATION</item>
+        <item>SURYANAMASKAR</item>
+        <item>Table Tennis</item>
+        <item>YOGASANA</item>
+    </string-array>
+
+    <string-array name="outdoor_sports_list">
+        <item>BASKETBALL</item>
+        <item>CRICKET</item>
+        <item>CROSS COUNTRY</item>
+        <item>KABADDI</item>
+        <item>KHO KHO</item>
+        <item>SLOW CYCLING</item>
+        <item>TUG OF WAR</item>
+        <item>VOLLEYBALL</item>
+    </string-array>
+    <string-array name="athletics">
+        <item>LONG JUMP</item>
+        <item>SHOT PUT</item>
+        <item>DISCUSS THROW</item>
+        <item>JAVELIN THROW</item>
+        <item>100M Run</item>
+        <item>4 X 100 M RELAY</item>
+    </string-array>
+    <string name="title_activity_admin_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+    <string name="under_construction">This Page is Under Construction</string>
+</resources>

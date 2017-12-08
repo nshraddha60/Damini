@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="shraddha.com.daminisportsapp.AdminHomeActivity">
+
+    <Button
+        android:id="@+id/schedule_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="57dp"
+        android:text="@string/schedule_menu" />
+
+    <Button
+        android:id="@+id/draws_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:text="@string/draws_menu"
+        android:layout_below="@+id/schedule_button"
+        android:layout_alignRight="@+id/schedule_button"
+        android:layout_alignEnd="@+id/schedule_button" />
+
+    <Button
+        android:id="@+id/result_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/result_menu"
+        android:layout_below="@+id/draws_button"
+        android:layout_alignLeft="@+id/draws_button"
+        android:layout_alignStart="@+id/draws_button" />
+
+    <Button
+        android:id="@+id/show_college_registration_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/college_registration"
+        android:layout_marginRight="81dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginTop="29dp"
+        android:layout_below="@+id/result_button"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/show_student_registration_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:text="@string/student_registartion"
+        android:layout_below="@+id/show_college_registration_button"
+        android:layout_alignLeft="@+id/show_college_registration_button"
+        android:layout_alignStart="@+id/show_college_registration_button" />
+</RelativeLayout>

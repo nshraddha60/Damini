@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/schedule"
+            android:icon="@drawable/calendar"
+            android:title="@string/schedule_menu" />
+        <item
+            android:id="@+id/draws"
+            android:icon="@drawable/message_draw"
+            android:title="@string/draws_menu" />
+        <item
+            android:id="@+id/photos"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/photos_menu" />
+
+        <item
+            android:id="@+id/awards"
+            android:icon="@drawable/trophy_award"
+            android:title="@string/award_menu" />
+        <item
+            android:id="@+id/admin_login"
+            android:icon="@drawable/loginicon"
+            android:title="Admin Login"/>
+
+        <item
+            android:id="@+id/about_damini"
+            android:icon="@drawable/account_multiple"
+            android:title="@string/about_damini_menu" />
+    </group>
+
+
+
+</menu>
