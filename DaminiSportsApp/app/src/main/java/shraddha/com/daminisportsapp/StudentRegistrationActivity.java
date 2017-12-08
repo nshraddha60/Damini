@@ -39,7 +39,7 @@ public class StudentRegistrationActivity extends AppCompatActivity{
     ListView indoorListView, outdoorListView, athleticsListView;
     EditText studentName,mobileNumber, studentEmail;
     String studName,collegeName,mob,email,bg;
-    String indoorGames,outdoorGames,athleticsGames;
+    String indoorGames = "",outdoorGames ="",athleticsGames="";
     ArrayAdapter<String> indoorAdapter, outdoorAdapter,athleticsAdapter;
 
 
@@ -242,7 +242,7 @@ public class StudentRegistrationActivity extends AppCompatActivity{
                 }
             }
         });
-    } 
+    }
 
     public void getData(){
         studName = studentName.getText().toString();
