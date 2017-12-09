@@ -8,91 +8,120 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="2600dp">
-
-    <TextView
-        android:id="@+id/damini_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="38dp"
-        android:text="@string/about_damini"
-        android:textSize="25dp"
-        android:textStyle="bold"/>
-
-    <TextView
-        android:id="@+id/damini_info"
-        android:layout_width="match_parent"
-        android:layout_height="600dp"
-        android:layout_marginTop="15dp"
-        android:text="@string/damini_info"
-        android:layout_marginLeft="15dp"
-        android:layout_below="@+id/damini_title"
-        android:layout_centerHorizontal="true" />
+        android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/mkss_title"
+            android:id="@+id/damini_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/damini_info"
+            android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="17dp"
-            android:text="@string/about_mkss"
-            android:textSize="25dp"
-            android:textStyle="bold"/>
+            android:layout_marginTop="38dp"
+            android:text="@string/about_damini"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/damini_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/damini_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:lineSpacingExtra="5dp"
+            android:text="@string/damini_info"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/aboutMKSS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/damini_info"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/maharshi_karve"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/anna"
+                app:border_color="@color/white"
+                app:border_width="1dp" />
+
+
+            <TextView
+                android:id="@+id/mkss_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/damini_info"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:text="@string/about_mkss"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
 
         <TextView
             android:id="@+id/mkss_info"
             android:layout_width="match_parent"
-            android:layout_height="850dp"
-            android:layout_below="@+id/mkss_title"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/aboutMKSS"
             android:layout_centerHorizontal="true"
+            android:layout_marginLeft="15dp"
             android:layout_marginTop="22dp"
+            android:lineSpacingExtra="5dp"
             android:text="@string/mkss_info"
-            android:layout_marginLeft="15dp"/>
+            android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/bnca_title"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/aboutBCNA"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/mkss_info"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="32dp"
-            android:text="@string/about_bnca"
-            android:textSize="25dp"
-            android:textStyle="bold"/>
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:weightSum="1">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/drkashyap"
+                app:border_color="@color/white"
+                app:border_width="1dp" />
+
+            <TextView
+                android:id="@+id/bnca_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mkss_info"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:text="@string/about_bnca"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
 
         <TextView
             android:id="@+id/bnca_info"
             android:layout_width="match_parent"
-            android:layout_height="870dp"
-            android:layout_below="@+id/bnca_title"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/aboutBCNA"
             android:layout_centerHorizontal="true"
+            android:layout_marginLeft="15dp"
             android:layout_marginTop="18dp"
+            android:lineSpacingExtra="5dp"
             android:text="@string/bnca_info"
-            android:layout_marginLeft="15dp"/>
-
-        <ImageView
-            android:id="@+id/bnca_principal"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            app:srcCompat="@drawable/drkashyap"
-            android:layout_above="@+id/bnca_info"
-            android:layout_alignRight="@+id/mkss_info"
-            android:layout_alignEnd="@+id/mkss_info" />
-
-        <ImageView
-            android:id="@+id/maharshi_karve"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            app:srcCompat="@drawable/anna"
-            android:layout_marginTop="578dp"
-            android:layout_alignTop="@+id/damini_info"
-            android:layout_alignRight="@+id/damini_info"
-            android:layout_alignEnd="@+id/damini_info" />
-
-
+            android:textSize="16sp" />
     </RelativeLayout>
 
 </ScrollView>
