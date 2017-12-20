@@ -56,17 +56,11 @@ public class LoginActivityStudent extends AppCompatActivity {
             public void onClick(View view) {
                 final String email = emailInput.getText().toString();
 
-                if (email.equalsIgnoreCase("true")){
-
-
+                if (email.trim().isEmpty() == false){
                     new AsyncLogin().execute(email);
-                }else if (email.equalsIgnoreCase("false")){
+                }else {
                     Toast.makeText(LoginActivityStudent.this, "Invalid Email", Toast.LENGTH_SHORT).show();
-                }else if (email.equalsIgnoreCase("exception") || email.equalsIgnoreCase("unsuccessfull")){
-                    Toast.makeText(LoginActivityStudent.this, "Oops!! Something went wrong. Try again.", Toast.LENGTH_SHORT).show();
                 }
-
-
             }
         });
 
@@ -91,11 +85,11 @@ public class LoginActivityStudent extends AppCompatActivity {
         @Override
         protected String doInBackground(String... strings) {
             try {
-                URL url = new URL("http://11f2a900.ngrok.io/damini/studentlogin.php");
+                URL url = new URL(" http://b00f45ac.ngrok.io/damini/studentlogin.php");
                 httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setReadTimeout(READ_TIMEOUT);
                 httpURLConnection.setConnectTimeout(CONNECTION_TIMEOUT);
-                httpURLConnection.setRequestMethod("GET");
+                httpURLConnection.setRequestMethod("POST");
 
                 httpURLConnection.setDoInput(true);
                 httpURLConnection.setDoOutput(true);
