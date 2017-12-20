@@ -1,12 +1,14 @@
 package shraddha.com.daminisportsapp;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -31,6 +33,7 @@ public class LoginActivityStudent extends AppCompatActivity {
 
     Button loginButton;
     EditText emailInput;
+    Intent intent;
 
     public static final int CONNECTION_TIMEOUT=10000;
     public static final int READ_TIMEOUT=15000;
@@ -71,10 +74,11 @@ public class LoginActivityStudent extends AppCompatActivity {
     }
 
 
-    private class AsyncLogin extends AsyncTask {
+    private class AsyncLogin extends AsyncTask<String, String , String> {
 
         ProgressDialog progressDialog = new ProgressDialog(LoginActivityStudent.this);
         HttpURLConnection httpURLConnection;
+
 
         @Override
         protected void onPreExecute() {
@@ -85,7 +89,7 @@ public class LoginActivityStudent extends AppCompatActivity {
             progressDialog.show();
         }
         @Override
-        protected Object doInBackground(Object[] params) {
+        protected String doInBackground(String... strings) {
             try {
                 URL url = new URL("http://11f2a900.ngrok.io/damini/studentlogin.php");
                 httpURLConnection = (HttpURLConnection) url.openConnection();
@@ -96,7 +100,7 @@ public class LoginActivityStudent extends AppCompatActivity {
                 httpURLConnection.setDoInput(true);
                 httpURLConnection.setDoOutput(true);
 
-                Uri.Builder builder = new Uri.Builder().appendQueryParameter("email", (String) params[0]);
+                Uri.Builder builder = new Uri.Builder().appendQueryParameter("email",  strings[0]);
                 String query = builder.build().getEncodedQuery();
 
                 OutputStream out = httpURLConnection.getOutputStream();
@@ -148,6 +152,16 @@ public class LoginActivityStudent extends AppCompatActivity {
 
         }
 
+        @Override
+        protected void onPostExecute(String s) {
+            super.onPostExecute(s);
+            Log.i("String from Doin", s);
+            if (s.equals("successful")){
+                intent = new Intent(LoginActivityStudent.this , EditStudentRecordActivity.class);
+                startActivity(intent);
+            }
+
+        }
     }
 
 }
