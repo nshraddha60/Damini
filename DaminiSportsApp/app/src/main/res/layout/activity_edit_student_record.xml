@@ -1,9 +1,230 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="shraddha.com.daminisportsapp.EditStudentRecordActivity">
 
-</android.support.constraint.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/edit_student_form_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:text="@string/student_registartion"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/edit_student_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/edit_college_name"
+            android:layout_alignStart="@+id/edit_college_name"
+            android:layout_below="@+id/edit_student_form_title"
+            android:layout_marginTop="35dp"
+            android:text="@string/name"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/student_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/edit_student_name"
+            android:layout_alignBottom="@+id/edit_student_name"
+            android:layout_alignLeft="@+id/college_name_spinner"
+            android:layout_alignStart="@+id/college_name_spinner"
+            android:background="@drawable/shape"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/edit_college_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/student_name"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="31dp"
+            android:text="@string/select_colege_name"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/college_name_spinner"
+            android:layout_width="215dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/edit_college_name"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
+            android:layout_toEndOf="@+id/edit_college_name"
+            android:layout_toRightOf="@+id/edit_college_name" />
+
+        <TextView
+            android:id="@+id/edit_mobile_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/edit_college_name"
+            android:layout_alignStart="@+id/edit_college_name"
+            android:layout_below="@+id/edit_college_name"
+            android:layout_marginTop="27dp"
+            android:text="@string/mobile_no"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/student_mobile_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/edit_mobile_no"
+            android:layout_alignLeft="@+id/college_name_spinner"
+            android:layout_alignStart="@+id/college_name_spinner"
+            android:background="@drawable/shape"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/edit_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/edit_mobile_no"
+            android:layout_alignStart="@+id/edit_mobile_no"
+            android:layout_below="@+id/student_mobile_no"
+            android:layout_marginTop="30dp"
+            android:text="@string/email"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/student_email_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/edit_email"
+            android:layout_alignBottom="@+id/edit_email"
+            android:layout_alignLeft="@+id/student_mobile_no"
+            android:layout_alignStart="@+id/student_mobile_no"
+            android:background="@drawable/shape"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/edit_blood_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/edit_email"
+            android:layout_alignStart="@+id/edit_email"
+            android:layout_below="@+id/student_email_edit"
+            android:layout_marginTop="29dp"
+            android:text="@string/blood_group"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/blood_group_spinner"
+            android:layout_width="215dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/edit_blood_group"
+            android:layout_alignLeft="@+id/student_email_edit"
+            android:layout_alignStart="@+id/student_email_edit" />
+
+        <TextView
+            android:id="@+id/select_event_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/edit_blood_group"
+            android:layout_alignStart="@+id/edit_blood_group"
+            android:layout_below="@+id/edit_blood_group"
+            android:layout_marginTop="28dp"
+            android:text="@string/select_event"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/edit_indoor_events"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/edit_student_form_title"
+            android:layout_alignStart="@+id/edit_student_form_title"
+            android:layout_below="@+id/select_event_title"
+            android:layout_marginTop="27dp"
+            android:text="@string/indoor_games"
+            android:textStyle="bold"
+            android:textSize="12sp"/>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:layout_alignLeft="@+id/edit_indoor_events"
+            android:layout_alignStart="@+id/edit_indoor_events"
+            android:layout_below="@+id/edit_indoor_events"
+            android:layout_marginTop="41dp"
+            android:id="@+id/edit_indoor_list" />
+
+        <TextView
+            android:id="@+id/edit_outdoor_games"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/edit_indoor_list"
+            android:layout_alignStart="@+id/edit_indoor_list"
+            android:layout_below="@+id/edit_indoor_list"
+            android:layout_marginTop="34dp"
+            android:text="@string/outdoor_games"
+            android:textStyle="bold"
+            android:textSize="12sp"/>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:layout_alignLeft="@+id/edit_outdoor_games"
+            android:layout_alignStart="@+id/edit_outdoor_games"
+            android:layout_below="@+id/edit_outdoor_games"
+            android:layout_marginTop="20dp"
+            android:id="@+id/edit_outdoor_list" />
+
+        <TextView
+            android:id="@+id/edit_athletics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/edit_outdoor_list"
+            android:layout_alignStart="@+id/edit_outdoor_list"
+            android:layout_below="@+id/edit_outdoor_list"
+            android:layout_marginTop="42dp"
+            android:text="@string/athletics"
+            android:textStyle="bold"
+            android:textSize="12sp"/>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="380dp"
+            android:layout_alignLeft="@+id/edit_athletics"
+            android:layout_alignStart="@+id/edit_athletics"
+            android:layout_below="@+id/edit_athletics"
+            android:layout_marginTop="15dp"
+            android:id="@+id/edit_athletics_list" />
+
+        <Button
+            android:id="@+id/save_changes_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit_athletics_list"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="51dp"
+            android:text="@string/save_changes_button" />
+
+
+    </RelativeLayout>
+
+
+
+
+</ScrollView>

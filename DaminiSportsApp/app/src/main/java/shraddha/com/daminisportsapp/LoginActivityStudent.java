@@ -1,9 +1,27 @@
 package shraddha.com.daminisportsapp;
 
+import android.app.ProgressDialog;
+import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 /**
  * Created by admin on 30/10/2017.
@@ -11,12 +29,12 @@ import android.support.v7.app.AppCompatActivity;
 
 public class LoginActivityStudent extends AppCompatActivity {
 
-    /*Button loginButton;
+    Button loginButton;
     EditText emailInput;
 
     public static final int CONNECTION_TIMEOUT=10000;
     public static final int READ_TIMEOUT=15000;
-*/
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -27,8 +45,8 @@ public class LoginActivityStudent extends AppCompatActivity {
 
         StrictMode.setThreadPolicy(policy);
 
-        /*loginButton = (Button) findViewById(R.id.login_button);
-        emailInput = (EditText) findViewById(R.id.email_input);
+        loginButton = findViewById(R.id.login_button);
+        emailInput = findViewById(R.id.email_input);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,8 +55,7 @@ public class LoginActivityStudent extends AppCompatActivity {
 
                 if (email.equalsIgnoreCase("true")){
 
-                    Intent intent = new Intent(LoginActivityStudent.this, EditStudentRecordActivity.class);
-                    startActivity(intent);
+
                     new AsyncLogin().execute(email);
                 }else if (email.equalsIgnoreCase("false")){
                     Toast.makeText(LoginActivityStudent.this, "Invalid Email", Toast.LENGTH_SHORT).show();
@@ -49,12 +66,12 @@ public class LoginActivityStudent extends AppCompatActivity {
 
             }
         });
-*/
+
 
     }
 
 
-    /*private class AsyncLogin extends AsyncTask {
+    private class AsyncLogin extends AsyncTask {
 
         ProgressDialog progressDialog = new ProgressDialog(LoginActivityStudent.this);
         HttpURLConnection httpURLConnection;
@@ -133,5 +150,5 @@ public class LoginActivityStudent extends AppCompatActivity {
         }
 
     }
-*/
+
 }

@@ -273,12 +273,12 @@ public class StudentRegistrationActivity extends AppCompatActivity{
         getData();
         String params = null;
 
-            params = "sn="+ studName+"&cn"+itemCollegeName+"&mob="+mob+"&email="+email+"&bg="+itemBloodGroup+"&ing="+indoorGames+"&outg="+outdoorGames+"&ath="+athleticsGames;
+            params = "sn="+ studName+"&cn="+itemCollegeName+"&mob="+mob+"&email="+email+"&bg="+itemBloodGroup+"&ing="+indoorGames+"&outg="+outdoorGames+"&ath="+athleticsGames;
 
 
         URL obj = null;
         try {
-            obj = new URL("http://damini.bnca.ac.in/registration.php");
+            obj = new URL("http://10.0.2.2/damini/registration.php");
         } catch (MalformedURLException e1) {
             e1.printStackTrace();
         }
@@ -289,9 +289,10 @@ public class StudentRegistrationActivity extends AppCompatActivity{
             e1.printStackTrace();
         }
         con.setRequestMethod("POST");
+       // con.setConnectTimeout(1500000);
 
         // For POST only - START
-        con.setDoOutput(true);
+       con.setDoOutput(true);
         OutputStream os = null;
         try {
             os = con.getOutputStream();

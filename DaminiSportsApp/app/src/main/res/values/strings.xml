@@ -32,6 +32,7 @@
     <string name="host_name">Organized by BNCA</string>
     <string name="mkss">MKSSS</string>
     <string name="edit_button">Edit</string>
+    <string name="save_changes_button">Save Changes</string>
 
     <string name="about_damini">About Damini</string>
     <string name="damini_info"> \u2022 Maharshi Karve Stree Shikshan Samstha,
@@ -140,4 +141,5 @@
     </string>
 
     <string name="under_construction">This Page is Under Construction</string>
+    <string name="title_activity_edit_student_record">EditStudentRecordActivity</string>
 </resources>

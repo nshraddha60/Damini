@@ -16,6 +16,7 @@
         android:layout_marginTop="149dp"
         android:ems="10"
         android:inputType="textEmailAddress"
+        android:hint="@string/email"
         android:background="@drawable/shape" />
 
     <Button

@@ -44,7 +44,7 @@ public class GetCollegeRegistrationActivity extends AppCompatActivity {
                 try {
                     URL url = new URL(urlWebService);
                     HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
-                    urlConnection.setRequestMethod("GET");
+                    urlConnection.setRequestMethod("POST");
                     inputStream = new BufferedInputStream(urlConnection.getInputStream());
                     StringBuilder stringBuilder = new StringBuilder();
                     BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));

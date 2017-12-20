@@ -23,8 +23,10 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
+import java.net.ProtocolException;
 import java.net.URL;
 import java.util.ArrayList;
 
@@ -38,7 +40,7 @@ public class CollegeRegistrationActivity extends AppCompatActivity {
     ArrayAdapter<String> indoorAdapter, outdoorAdapter, athleticsAdapter;
     Intent intent;
     String sportsTeacherName, itemCollegeName,mob,email;
-    String indoorGames,outdoorGames, athleticsGames;
+    String indoorGames="",outdoorGames="", athleticsGames="";
 
 
     ArrayList<String> selectedIndoorItems;
@@ -192,7 +194,11 @@ public class CollegeRegistrationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (checkValidation()){
-                    submitform();
+                    try {
+                        submitform();
+                    } catch (ProtocolException e) {
+                        e.printStackTrace();
+                    }
                 }
                 else {
                     Toast.makeText(CollegeRegistrationActivity.this, "This form contains error", Toast.LENGTH_SHORT).show();
@@ -227,33 +233,98 @@ public class CollegeRegistrationActivity extends AppCompatActivity {
 
     }
 
-    private void submitform(){
+    private void submitform() throws ProtocolException{
         getData();
-        String SelectedIndoor = null;
-        for(String item : selectedIndoorItems){
-            SelectedIndoor += item +",";
+        String params = null;
+
+        params = "tn="+ sportsTeacherName+"&cn="+itemCollegeName+"&mob="+mob+"&email="+email+"&ing="+indoorGames+"&outg="+outdoorGames+"&ath="+athleticsGames;
+
+
+        URL obj = null;
+        try {
+            obj = new URL("http://damini.bnca.ac.in/collegeregistration.php");
+        } catch (MalformedURLException e1) {
+            e1.printStackTrace();
         }
+        HttpURLConnection con = null;
+        try {
+            con = (HttpURLConnection) obj.openConnection();
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+        con.setRequestMethod("POST");
+        //con.setConnectTimeout(1500000);
 
-        String dataString = "tn=\"" +sportsTeacherName+"\"&cn=\""+itemCollegeName+"\"&mob="+mob+"&email=\""+email+"\"&ing=\""+indoorGames+"\"&outg=\""+outdoorGames+"\"&ath=\""+athleticsGames+"\"";
+        // For POST only - START
+         con.setDoOutput(true);
+        OutputStream os = null;
+        try {
+            os = con.getOutputStream();
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+        try {
+            os.write(params.getBytes());
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+        try {
+            os.flush();
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+        try {
+            os.close();
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+        // For POST only - END
 
-        try{
-            URL url = new URL("http://damini.bnca.ac.in/collegeregistration.php?"+dataString);
-            HttpURLConnection urlConnection = (HttpURLConnection) url
-                    .openConnection();
-            InputStream in = urlConnection.getInputStream();
+        int responseCode = 0;
+        try {
+            responseCode = con.getResponseCode();
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+        System.out.println("POST Response Code :: " + responseCode);
 
-            InputStreamReader isw = new InputStreamReader(in);
-            BufferedReader reader = new BufferedReader(isw);
-            String data = null;
-            while ((data = reader.readLine())!= null){
-                Log.i("Line",data);
+        if (responseCode == HttpURLConnection.HTTP_OK) { //success
+            BufferedReader in = null;
+            try {
+                in = new BufferedReader(new InputStreamReader(
+                        con.getInputStream()));
+            } catch (IOException e1) {
+                e1.printStackTrace();
             }
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+            String inputLine;
+            StringBuffer response = new StringBuffer();
 
+            try {
+                while ((inputLine = in.readLine()) != null) {
+                    response.append(inputLine);
+                }
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
+            try {
+                in.close();
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
+
+            // print result
+            System.out.println(response.toString());
+            if(response.toString().contains("reg_success")){
+                Toast.makeText(this, "You have registered successfully", Toast.LENGTH_SHORT).show();
+                intent = new Intent(CollegeRegistrationActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+
+
+        } else {
+            System.out.println("POST request not worked");
+        }
     }
 
     private boolean checkValidation() {
