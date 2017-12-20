@@ -278,7 +278,7 @@ public class StudentRegistrationActivity extends AppCompatActivity{
 
         URL obj = null;
         try {
-            obj = new URL("http://10.0.2.2/damini/registration.php");
+            obj = new URL("http://11f2a900.ngrok.io/damini/registration.php");
         } catch (MalformedURLException e1) {
             e1.printStackTrace();
         }

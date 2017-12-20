@@ -84,11 +84,10 @@ public class LoginActivityStudent extends AppCompatActivity {
             progressDialog.setCancelable(false);
             progressDialog.show();
         }
-
         @Override
         protected Object doInBackground(Object[] params) {
             try {
-                URL url = new URL("http://10.0.2.2/damini/studentlogin.php");
+                URL url = new URL("http://11f2a900.ngrok.io/damini/studentlogin.php");
                 httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setReadTimeout(READ_TIMEOUT);
                 httpURLConnection.setConnectTimeout(CONNECTION_TIMEOUT);
