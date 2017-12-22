@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
@@ -91,20 +92,35 @@ public class LoginActivityStudent extends AppCompatActivity {
                 httpURLConnection.setConnectTimeout(CONNECTION_TIMEOUT);
                 httpURLConnection.setRequestMethod("POST");
 
-                httpURLConnection.setDoInput(true);
+              //  httpURLConnection.setDoInput(true);
                 httpURLConnection.setDoOutput(true);
+                String email = "email="+strings[0];
 
-                Uri.Builder builder = new Uri.Builder().appendQueryParameter("email",  strings[0]);
-                String query = builder.build().getEncodedQuery();
 
-                OutputStream out = httpURLConnection.getOutputStream();
-                BufferedWriter writer = new BufferedWriter(
-                        new OutputStreamWriter(out, "UTF-8"));
-                writer.write(query);
-                writer.flush();
-                writer.close();
-                out.close();
-                httpURLConnection.connect();
+
+                OutputStream os = null;
+                try {
+                    os = httpURLConnection.getOutputStream();
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
+
+                try {
+                    os.write(email.getBytes());
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
+                try {
+                    os.flush();
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
+                try {
+                    os.close();
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
+
 
             } catch (MalformedURLException e) {
                 e.printStackTrace();
@@ -112,45 +128,53 @@ public class LoginActivityStudent extends AppCompatActivity {
                 e.printStackTrace();
             }
 
+            int responseCode = 0;
             try {
+                responseCode = httpURLConnection.getResponseCode();
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
+            System.out.println("POST Response Code :: " + responseCode);
 
-                int response_code = httpURLConnection.getResponseCode();
+            if (responseCode == HttpURLConnection.HTTP_OK) { //success
+                BufferedReader in = null;
+                try {
+                    in = new BufferedReader(new InputStreamReader(
+                            httpURLConnection.getInputStream()));
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
+                String inputLine;
+                StringBuffer response = new StringBuffer();
 
-                // Check if successful connection made
-                if (response_code == HttpURLConnection.HTTP_OK) {
-
-                    // Read data sent from server
-                    InputStream input = httpURLConnection.getInputStream();
-                    BufferedReader reader = new BufferedReader(new InputStreamReader(input));
-                    StringBuilder result = new StringBuilder();
-                    String line;
-
-                    while ((line = reader.readLine()) != null) {
-                        result.append(line);
+                try {
+                    while ((inputLine = in.readLine()) != null) {
+                        response.append(inputLine);
                     }
-
-                    // Pass data to onPostExecute method
-                    return(result.toString());
-
-                }else{
-
-                    return("unsuccessful");
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
+                try {
+                    in.close();
+                } catch (IOException e1) {
+                    e1.printStackTrace();
                 }
 
-            } catch (IOException e) {
-                e.printStackTrace();
-                return "exception";
-            } finally {
-                httpURLConnection.disconnect();
+
+                // print result
+                return  response.toString();
             }
+
+
+                return "unsuccessful";
 
         }
 
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
-            Log.i("String from Doin", s);
-            if (s.equals("successful")){
+            progressDialog.dismiss();
+            if (s.equals("true")){
                 intent = new Intent(LoginActivityStudent.this , EditStudentRecordActivity.class);
                 startActivity(intent);
             }
