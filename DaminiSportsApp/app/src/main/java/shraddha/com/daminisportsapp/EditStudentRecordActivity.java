@@ -56,6 +56,7 @@ public class EditStudentRecordActivity extends AppCompatActivity {
     HashMap<String, String> resultHashMap = new HashMap<>();
     String finalJsonObject;
     HttpURLConnection httpURLConnection;
+    String studentName,getcollegeName, mobileNo,bloodGroup;
 
 
     @Override
@@ -84,7 +85,7 @@ public class EditStudentRecordActivity extends AppCompatActivity {
 
         tempIntent = getIntent().getStringExtra("ListViewValue");
 
-        httpWebCall(tempIntent);
+                new HttpCallFunction().execute(tempIntent);
 
 
 
@@ -120,13 +121,13 @@ public class EditStudentRecordActivity extends AppCompatActivity {
         bloodGroups.setAdapter(bloodGroupAdapter);
     }
 
-    public void httpWebCall(final String listViewClickedItem){
+
         class HttpCallFunction extends AsyncTask<String, Void,String>{
 
             @Override
             protected String doInBackground(String... strings) {
                 try {
-                    URL url = new URL(" http://b00f45ac.ngrok.io/damini/studentlogin.php");
+                    URL url = new URL(" http://69469fa4.ngrok.io/damini/studentlogin.php");
                     httpURLConnection = (HttpURLConnection) url.openConnection();
                     httpURLConnection.setReadTimeout(READ_TIMEOUT);
                     httpURLConnection.setConnectTimeout(CONNECTION_TIMEOUT);
@@ -134,11 +135,11 @@ public class EditStudentRecordActivity extends AppCompatActivity {
 
                     //  httpURLConnection.setDoInput(true);
                     httpURLConnection.setDoOutput(true);
-                    String studentName = "name=" + strings[0];
-                    String collegeName = "college="+strings[1];
-                    String mobileNo = "mobile="+strings[2];
-                    String email = "email="+strings[3];
-                    String bloodGroup = "bg="+strings[4];
+                    studentName = "name=" + strings[0];
+                    getcollegeName = "college="+strings[1];
+                     mobileNo = "mobile="+strings[2];
+                     email = "email="+strings[3];
+                     bloodGroup = "bg="+strings[4];
                     OutputStream os = null;
                     try {
                         os = httpURLConnection.getOutputStream();
@@ -219,7 +220,7 @@ public class EditStudentRecordActivity extends AppCompatActivity {
             }
         }
 
-    }
+
     private class GetHttpResponse extends AsyncTask<Void, Void, Void>{
 
         public Context context;
@@ -240,10 +241,10 @@ public class EditStudentRecordActivity extends AppCompatActivity {
                     for (int i=0 ; i<jsonArray.length() ; i++){
                         jsonObject = jsonArray.getJSONObject(i);
 
-                        studName = jsonObject.getString("name").toString();
-                        collegeName = jsonObject.getJSONObject("college name").toString();
-                        mob = jsonObject.getString("mobile").toString();
-                        email= jsonObject.getString("email").toString();
+                        studName = jsonObject.getString(studentName).toString();
+                        collegeName = jsonObject.getJSONObject(getcollegeName).toString();
+                        mob = jsonObject.getString(mobileNo).toString();
+                        email= jsonObject.getString(bloodGroup).toString();
                        // bg = jsonObject.getString("blood group").toString();
 
                     }

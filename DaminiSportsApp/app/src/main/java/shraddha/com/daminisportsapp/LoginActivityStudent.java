@@ -86,7 +86,7 @@ public class LoginActivityStudent extends AppCompatActivity {
         @Override
         protected String doInBackground(String... strings) {
             try {
-                URL url = new URL(" http://b00f45ac.ngrok.io/damini/studentlogin.php");
+                URL url = new URL(" http://69469fa4.ngrok.io/damini/studentlogin.php");
                 httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setReadTimeout(READ_TIMEOUT);
                 httpURLConnection.setConnectTimeout(CONNECTION_TIMEOUT);
