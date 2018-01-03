@@ -159,42 +159,11 @@
         \n \u2022 One Over by One Bowler only.
         \n \u2022 No LBW.</string>
     <string name="rules_suryanamskar_title"><b>Suryanamaskar</b></string>
-    <string name="rules_suryanamaskar">\u2022 Min. 3 students from each college. Max 6
-        \n \u2022  More than 1 team can participate from each college.
-        \n \u2022  Each college must perform immediately after
-        \n Suryanamaskar (College can change the participants.)
-        \n \u2022  Each college team must perform 4 compulsory Asanas
-        by lottery system.
-        \n \u2022  And 2 asanasas per their liking from the given list.
-        \n \u2022  10 marks for each Asana, the judges will mark out of
-        60.
-        \n \u2022 Evaluation will be based as follows
-            \n (1) Starting Position: 10
-            \n (2) Flexibility &amp; Capacity: 10
-            \n (3) Accuracy in position &amp; Breathing: 20
-            \n (4) Team Presentation &amp; Personality: 10
-            \n (5) Judge’s Opinion: 10
-            \n (6) Total Marks :60</string>
+
     <string name="rules_yogasana_title">Yogasana</string>
-    <string name="rules_yogasana">\u2022 Min. 3 students from each college. Max 6
-            \n \u2022 More than 1 team can participate from each college.
-            \n \u2022 Each college must perform immediately after
-            Suryanamaskar (College can change the participants.)
-            \n \u2022 Each college team must perform 4 compulsory Asanas
-            by lottery system.
-            \n \u2022 And 2 asanasas per their liking from the given list.
-            \n \u2022 10 marks for each Asana, the judges will mark out of
-            60.
-            \n \u2022 Evaluation will be based as follows:
-            \n (1) Starting Position: 2
-            \n (2) Capacity &amp; Comfort: 2
-            \n (3) Final Position: 3
-            \n (4) Team Presentation: 1
-            \n (5) Judge’s Opinion: 2
-            \n (6) Total Marks: 10</string>
+
 
     <string name="damini_event">Events\' Schedule</string>
-
 
 
     <string-array name="colleges_list">

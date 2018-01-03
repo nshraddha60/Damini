@@ -8,7 +8,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="20000dp">
 
         <TextView
             android:id="@+id/mksss_title"
@@ -143,45 +143,23 @@
             android:layout_marginTop="30dp"
             android:text="@string/rules_cricket" />
 
-        <TextView
-            android:id="@+id/rules_suryanamaskar_title"
+        <Button
+            android:id="@+id/rules_yogasana_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/rules_cricket"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="53dp"
-            android:text="@string/rules_suryanamskar_title" />
+            android:layout_marginTop="33dp"
+            android:text="@string/rules_yogasana_title" />
 
-        <TextView
-            android:id="@+id/rules_suryanamaskar"
+        <Button
+            android:id="@+id/rules_suryanamaskar_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/rules_cricket"
-            android:layout_alignStart="@+id/rules_cricket"
-            android:layout_below="@+id/rules_suryanamaskar_title"
-            android:layout_marginTop="32dp"
-            android:text="@string/rules_suryanamaskar" />
-
-        <TextView
-            android:id="@+id/rules_yogasana_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/rules_suryanamaskar"
+            android:layout_below="@+id/rules_yogasana_button"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="32dp"
-            android:text="@string/rules_yogasana_title"
-            android:textStyle="bold"
-            android:textSize="22sp"/>
-
-        <TextView
-            android:id="@+id/rules_yogasana"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/rules_suryanamaskar"
-            android:layout_alignStart="@+id/rules_suryanamaskar"
-            android:layout_below="@+id/rules_yogasana_title"
-            android:layout_marginTop="25dp"
-            android:text="@string/rules_yogasana" />
+            android:layout_marginTop="59dp"
+            android:text="@string/rules_suryanamskar_title" />
 
 
     </RelativeLayout>
