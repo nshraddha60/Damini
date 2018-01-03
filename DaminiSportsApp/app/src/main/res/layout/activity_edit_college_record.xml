@@ -4,23 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="shraddha.com.daminisportsapp.EditStudentRecordActivity">
-
+    tools:context="shraddha.com.daminisportsapp.EditCollegeRecordActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-    <TextView
-        android:id="@+id/edit_college_form_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="18dp"
-        android:text="@string/student_registartion"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:textAlignment="center"/>
+        <TextView
+            android:id="@+id/edit_college_form_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp"
+            android:text="@string/college_registration"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textAlignment="center"/>
 
         <TextView
             android:id="@+id/edit_teacher_name"
@@ -118,32 +117,12 @@
             android:inputType="textPersonName" />
 
         <TextView
-            android:id="@+id/edit_blood_group"
+            android:id="@+id/select_event_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/edit_email"
             android:layout_alignStart="@+id/edit_email"
-            android:layout_below="@+id/teacher_email_edit"
-            android:layout_marginTop="29dp"
-            android:text="@string/blood_group"
-            android:textSize="15sp"
-            android:textStyle="bold" />
-
-        <Spinner
-            android:id="@+id/blood_group_spinner"
-            android:layout_width="215dp"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/edit_blood_group"
-            android:layout_alignLeft="@+id/teacher_email_edit"
-            android:layout_alignStart="@+id/teacher_email_edit" />
-
-        <TextView
-            android:id="@+id/select_event_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/edit_blood_group"
-            android:layout_alignStart="@+id/edit_blood_group"
-            android:layout_below="@+id/edit_blood_group"
+            android:layout_below="@+id/edit_email"
             android:layout_marginTop="28dp"
             android:text="@string/select_event"
             android:textSize="15sp"
@@ -223,8 +202,4 @@
 
 
     </RelativeLayout>
-
-
-
-
 </ScrollView>

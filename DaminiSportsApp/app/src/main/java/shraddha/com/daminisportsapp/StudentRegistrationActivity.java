@@ -1,7 +1,6 @@
 package shraddha.com.daminisportsapp;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
@@ -20,27 +19,26 @@ import android.widget.Toast;
 
 import com.shraddha.validator.Validator;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
-import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
-import java.net.URLConnection;
-import java.net.URLEncoder;
 import java.util.ArrayList;
 
-public class StudentRegistrationActivity extends AppCompatActivity{
+public class StudentRegistrationActivity extends AppCompatActivity {
     Button submitButton;
     ListView indoorListView, outdoorListView, athleticsListView;
-    EditText studentName,mobileNumber, studentEmail;
-    String studName,collegeName,mob,email,bg;
-    String indoorGames = "",outdoorGames ="",athleticsGames="";
-    ArrayAdapter<String> indoorAdapter, outdoorAdapter,athleticsAdapter;
+    EditText studentName, mobileNumber, studentEmail;
+    String studName, collegeName, mob, email, bg;
+    String indoorGames = "", outdoorGames = "", athleticsGames = "";
+    ArrayAdapter<String> indoorAdapter, outdoorAdapter, athleticsAdapter;
 
 
     Spinner collegeNames;
@@ -51,7 +49,6 @@ public class StudentRegistrationActivity extends AppCompatActivity{
     ArrayList<String> selectedIndoorItems;
     ArrayList<String> selectedOutdoorItems;
     ArrayList<String> selectedAthleticsItems;
-
 
 
     @Override
@@ -130,15 +127,15 @@ public class StudentRegistrationActivity extends AppCompatActivity{
         final String[] outdoorSports = getResources().getStringArray(R.array.outdoor_sports_list);
         final String[] athletics = getResources().getStringArray(R.array.athletics);
 
-        indoorAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_multiple_choice,indoorSports);
+        indoorAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_multiple_choice, indoorSports);
         indoorListView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
         indoorListView.setAdapter(indoorAdapter);
 
-        outdoorAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_multiple_choice,outdoorSports);
+        outdoorAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_multiple_choice, outdoorSports);
         outdoorListView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
         outdoorListView.setAdapter(outdoorAdapter);
 
-        athleticsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_multiple_choice,athletics);
+        athleticsAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_multiple_choice, athletics);
         athleticsListView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
         athleticsListView.setAdapter(athleticsAdapter);
 
@@ -146,7 +143,7 @@ public class StudentRegistrationActivity extends AppCompatActivity{
         String[] colleges = getResources().getStringArray(R.array.colleges_list);
         final String[] bloodGroup = getResources().getStringArray(R.array.blood_groups);
 
-        collegeAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,colleges);
+        collegeAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, colleges);
         collegeNames.setAdapter(collegeAdapter);
 
         bloodGroupAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, bloodGroup);
@@ -157,28 +154,26 @@ public class StudentRegistrationActivity extends AppCompatActivity{
         selectedAthleticsItems = new ArrayList<String>();
 
 
-        outdoorListView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+        outdoorListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String checkedValue = (String) outdoorListView.getItemAtPosition(position);
-                if (selectedOutdoorItems.contains(checkedValue)){
+                if (selectedOutdoorItems.contains(checkedValue)) {
                     selectedOutdoorItems.remove(checkedValue);
-                }
-                else {
+                } else {
                     selectedOutdoorItems.add(checkedValue);
                 }
             }
 
         });
 
-        indoorListView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+        indoorListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String checkedValue = (String) indoorListView.getItemAtPosition(position);
-                if (selectedIndoorItems.contains(checkedValue)){
+                if (selectedIndoorItems.contains(checkedValue)) {
                     selectedIndoorItems.remove(checkedValue);
-                }
-                else {
+                } else {
                     selectedIndoorItems.add(checkedValue);
                 }
             }
@@ -189,16 +184,13 @@ public class StudentRegistrationActivity extends AppCompatActivity{
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String checkedValue = (String) athleticsListView.getItemAtPosition(position);
-                if (selectedAthleticsItems.contains(checkedValue)){
+                if (selectedAthleticsItems.contains(checkedValue)) {
                     selectedAthleticsItems.remove(checkedValue);
-                }
-                else {
+                } else {
                     selectedAthleticsItems.add(checkedValue);
                 }
             }
         });
-
-
 
 
         collegeNames.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -226,59 +218,80 @@ public class StudentRegistrationActivity extends AppCompatActivity{
         });
 
 
-
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (checkValidation()){
+                if (checkValidation()) {
                     try {
                         submitForm();
                     } catch (ProtocolException e) {
                         e.printStackTrace();
                     }
-                }
-                else {
+                } else {
                     Toast.makeText(StudentRegistrationActivity.this, "This form contains error", Toast.LENGTH_SHORT).show();
                 }
             }
         });
     }
 
-    public void getData(){
+    public String getData() {
         studName = studentName.getText().toString();
 
-        collegeName= collegeNames.getSelectedItem().toString();
+        collegeName = collegeNames.getSelectedItem().toString();
 
-        mob= mobileNumber.getText().toString();
+        mob = mobileNumber.getText().toString();
 
         email = studentEmail.getText().toString();
 
         bg = bloodGroups.getSelectedItem().toString();
 
-        for (String indoorEvents : selectedIndoorItems) {
-            indoorGames += indoorEvents  + ","+"\t";
-        }
-        for (String outdoorEvents : selectedOutdoorItems) {
-            outdoorGames += outdoorEvents + ","+"\t";
+        JSONObject studentRegistrationObject = new JSONObject();
+
+        try {
+            studentRegistrationObject.put("student_name", studName);
+            studentRegistrationObject.put("college_name", collegeName);
+            studentRegistrationObject.put("email", email);
+            studentRegistrationObject.put("mobile_number", mob);
+            studentRegistrationObject.put("blood_group", bg);
+
+            JSONArray indoorGamesArray = new JSONArray();
+
+            for (int i = 0; i < selectedIndoorItems.size(); i++) {
+                indoorGamesArray.put(selectedIndoorItems.get(i));
+            }
+
+            studentRegistrationObject.put("indoor_games", indoorGamesArray);
+
+            JSONArray outdoorGamesArray = new JSONArray();
+
+            for (int i = 0; i < selectedOutdoorItems.size(); i++) {
+                outdoorGamesArray.put(selectedOutdoorItems.get(i));
+            }
+
+            studentRegistrationObject.put("outdoor_games", outdoorGamesArray);
+
+            JSONArray athleticsGamesArray = new JSONArray();
+
+            for (int i = 0; i < selectedAthleticsItems.size(); i++) {
+                athleticsGamesArray.put(selectedAthleticsItems.get(i));
+            }
+
+            studentRegistrationObject.put("athletic_games", athleticsGamesArray);
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
 
-        for (String athleticEvents : selectedAthleticsItems) {
-            athleticsGames += athleticEvents + ","+"\t";
-        }
-
+        return studentRegistrationObject.toString();
 
     }
 
     private void submitForm() throws ProtocolException {
-        getData();
-        String params = null;
 
-            params = "sn="+ studName+"&cn="+itemCollegeName+"&mob="+mob+"&email="+email+"&bg="+itemBloodGroup+"&ing="+indoorGames+"&outg="+outdoorGames+"&ath="+athleticsGames;
-
-
+        String params = "student_reg_param="+getData();
         URL obj = null;
         try {
-            obj = new URL(" http://b00f45ac.ngrok.io/damini/registration.php");
+           obj = new URL(" http://damini.bnca.ac.in/registration.php");
         } catch (MalformedURLException e1) {
             e1.printStackTrace();
         }
@@ -289,10 +302,7 @@ public class StudentRegistrationActivity extends AppCompatActivity{
             e1.printStackTrace();
         }
         con.setRequestMethod("POST");
-       // con.setConnectTimeout(1500000);
-
-        // For POST only - START
-       con.setDoOutput(true);
+        con.setDoOutput(true);
         OutputStream os = null;
         try {
             os = con.getOutputStream();
@@ -314,7 +324,6 @@ public class StudentRegistrationActivity extends AppCompatActivity{
         } catch (IOException e1) {
             e1.printStackTrace();
         }
-        // For POST only - END
 
         int responseCode = 0;
         try {
@@ -322,9 +331,8 @@ public class StudentRegistrationActivity extends AppCompatActivity{
         } catch (IOException e1) {
             e1.printStackTrace();
         }
-        System.out.println("POST Response Code :: " + responseCode);
 
-        if (responseCode == HttpURLConnection.HTTP_OK) { //success
+        if (responseCode == HttpURLConnection.HTTP_OK) {
             BufferedReader in = null;
             try {
                 in = new BufferedReader(new InputStreamReader(
@@ -349,12 +357,14 @@ public class StudentRegistrationActivity extends AppCompatActivity{
             }
 
             // print result
-            System.out.println(response.toString());
-            if(response.toString().contains("reg_success")){
-                Toast.makeText(this, "You have registered successfully", Toast.LENGTH_SHORT).show();
+            if (response.toString().contains("reg_success")) {
+                Toast.makeText(this, "You have registered successfully.", Toast.LENGTH_SHORT).show();
                 intent = new Intent(StudentRegistrationActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
+            }
+            else {
+                Toast.makeText(this, response.toString(), Toast.LENGTH_SHORT).show();
             }
 
 

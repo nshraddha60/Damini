@@ -23,7 +23,7 @@
         <item
             android:id="@+id/admin_login"
             android:icon="@drawable/loginicon"
-            android:title="Admin Login"/>
+            android:title="Rules"/>
 
         <item
             android:id="@+id/about_damini"

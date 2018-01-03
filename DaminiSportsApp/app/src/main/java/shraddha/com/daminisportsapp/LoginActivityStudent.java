@@ -86,13 +86,12 @@ public class LoginActivityStudent extends AppCompatActivity {
         @Override
         protected String doInBackground(String... strings) {
             try {
-                URL url = new URL(" http://69469fa4.ngrok.io/damini/studentlogin.php");
+                URL url = new URL("http://10.0.2.2/damini/studentlogin.php");
                 httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setReadTimeout(READ_TIMEOUT);
                 httpURLConnection.setConnectTimeout(CONNECTION_TIMEOUT);
                 httpURLConnection.setRequestMethod("POST");
 
-              //  httpURLConnection.setDoInput(true);
                 httpURLConnection.setDoOutput(true);
                 String email = "email="+strings[0];
 
@@ -165,7 +164,6 @@ public class LoginActivityStudent extends AppCompatActivity {
                 return  response.toString();
             }
 
-
                 return "unsuccessful";
 
         }
@@ -176,6 +174,7 @@ public class LoginActivityStudent extends AppCompatActivity {
             progressDialog.dismiss();
             if (s.equals("true")){
                 intent = new Intent(LoginActivityStudent.this , EditStudentRecordActivity.class);
+                intent.putExtra("UserName",emailInput.getText().toString().trim());
                 startActivity(intent);
             }
 

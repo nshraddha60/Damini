@@ -64,6 +64,138 @@
     <string name="bnca_info">MKSSS’s Dr. Bhanuben Nanavati College of Architecture for Women, founded in 1994 under the able leadership of Mr. Avinash Wardekar and Principal Dr Anurag Kashyap, with the generous donation of Rs. 90 lakhs given by Late Mr. Mahendrabhai Nanavati has a glorious historical background of Maharshi Karve Stree Shikshan Sanstha, Pune, founded in 1896, with the main <b>mission of uplifting the social, educational, financial and spiritual conditions of women and widows, making them confident and self reliant</b> . The institute is conceived as a multidisciplinary center of learning where architectural education is considered as a total personality development program. \n It offers Bachelor of Architecture B Arch), Master of Architecture (M Arch) and Doctorate programs (PhD) under Savitribai Phule Pune University. It was evolved in essence to ensure quality education and it has maintained this agenda to the present day. This institute has been established with a futuristic approach and idealism towards architectural education. \n Endowed with an excellent infrastructure, motivating faculty and a great tradition of empowering women through education for the last 114 years, we are committed to establish and enhance the importance and role of women in the challenging field of Architecture, Interior Design, Digital Architecture, Environmental Architecture and Landscape Architecture, as well as Doctorate in Architecture. We have always been on the fore front and in pace with the latest technological development. It is our dream, that keeps us motivated, to make our campus a hub of Architectural education and experimentation. We are therefore forever keen to introduce as many courses possible to our students. \n We also believe that, ‘life is larger than all other disciplines of education put together’ and our mission is ‘to produce excellent professionals, with a complete personality who can do justice to all aspects of life, besides developing into good human beings’. \n Our aim is to be one of the best colleges of Architecture in the world, by achieving the highest standards in Architectural Education, Research and other related activities besides uplifting the socio-economic, educational and spiritual status of women. \n Our motif here is to educate and prepare students to be creative and technically skilled professionals, qualified for productive careers in the field of architecture. The college works with a vision to prepare professional architects of highest integrity and entrepreneurial aptitude. It aims to give the student’s profile a competitive edge by making them specialist in various advanced fields, one of which is computer applications. Our college ensures that the students will not only excel in academics but also simultaneously tread a path to a total holistic growth.</string>
     <string name="action_settings">Settings</string>
 
+    <string name="mksss_title">Maharshi Karve Stree Shikshan Samstha’s</string>
+    <string name="bnca_title">Dr. B. N. College of Architecture</string>
+    <string name="bnca_address">Karvenagar, Pune-411052</string>
+    <string name="rules_thug_war_title">Rules of TUG of WAR</string>
+    <string name="rules_thug_war"><b>Composition of Teams</b> \n Teams will consist of ten competitors and a coach. \n <b>Weight</b> \n Total Weight 510 kg \n
+        Total Students: Maximum 10 \n <b>Dress</b> \n (a) Each member of a team will be dressed alike. \n (b) Coaches will wear uniform. \n (c) The boots or shoes worn must be service matching boots or
+        shoes, but all spikes, studs, springs, hobnails etc. if any, must be removed. Toe and Heel plates if flush with the leather, may be
+        worn. \n <b>Method of Draw</b> \n The competing teams will be drawn in pairs. All "Byes" must be disposed of in the first round of preliminary stage of the
+        competition. \n <b>Duration of Competitions</b> \n All competitions shall be decided by the best of three pulls, i.e. the first team to be awarded two pulls. The time interval between pulls will be left to the discretion to the Referee. \n <b>Dimensions of Arena</b> \n The arena will be limited to a total breadth of 40 ft., the boundary
+        to be clearly marked. Any team putting in a crooked direction, to go outside this limit, will be considered to have lost the pull. Posts will be placed twelve feet on each side of a center line 1 TUG OF
+        WAR RULES-1902 marketed on the ground team will be considered beaten when the center mark on the rope crosses the line indicated by the posts on the side of the opposing team. At
+        the start the rope shall be taut, and the front man of each team shall not be more than 3 ft., away from the side line. \n <b>Dimensions of the Rope</b> \n The rope shall not be less than four inches and not more than 5
+        inches in circumference, without knots or other holdings for the hands, and the minimum length not less than 140 feet. \n <b>Officials, method of Conducting</b> \n (a) Provision Organizing Committee will be responsible for
+        detailing officials. \n (b) Requirements: One Referee Two Judges Officer to conduct weigh-in. \n (c) Duties of Referee: He will be responsible that these rules are
+        adhere to. \n <b>Judges:</b> One Judge will be detailed to each team. Judges will examine the boots of the teams.</string>
+
+    <string name="rules_chess_title">Chess Rules</string>
+    <string name="rules_chess"><b>Basic moves</b> \n The <b>king</b> moves exactly one square horizontally, vertically, or diagonally. A special move with the king known as castling is allowed only once per player, per game (see below). \n \u2022 A <b>rook</b> moves any number of vacant squares in a horizontal or vertical direction. It also is moved when castling. \n \u2022 A <b>bishop</b> moves any number of vacant squares in any diagonal direction. \n 􀀀 The queen moves any number of vacant squares in a
+        horizontal, vertical, or diagonal direction. \n \u2022 A <b>knight</b> moves to the nearest square not on the same rank, file, or diagonal. The knight is not blocked by other pieces: it jumps to the new location. \n \u2022 <b>Pawns have the most complex rules of movement: </b>\n  \u2022 A pawn moves straight forward one square, if that square is
+        vacant. If it has not yet moved, a pawn also has the option of moving two squares straight forward, provided both squares are vacant. Pawns cannot move backwards. \n \u2022 Pawns are the only pieces that capture differently from how they move. A pawn can capture an enemy piece on either of the two squares diagonally in front of the pawn (but cannot move to
+        those squares if they are vacant). \n The pawn is also involved in the two special moves en passant and promotion. \n \n <b>Castling</b> \n
+        Castling consists of moving the king two squares towards a rook,
+        then placing the rook on the other side of the king, adjacent to
+        it.[2] Castling is only permissible if all of the following conditions
+        hold: \n \u2022 The king and rook involved in castling must not have
+        previously moved; \n \u2022 There must be no pieces between the king and the rook;
+        \n \u2022 The king may not currently be in check, nor may the king pass
+        through or end up in a square that is under attack by an enemy
+        piece (though the rook is permitted to be under attack and to
+        pass over an attacked square);
+        \n \u2022 The king and the rook must be on the same rank \n If a white pawn moves forward two squares and Black has a pawn
+        on the fourth rank on an adjacent file, Black can capture White's
+        pawn as if the white pawn had moved only one square. This
+        capture can be made only on the immediately subsequent move.
+        In this example, if the white pawn moves a2–a4, the black pawn
+        on b4 can capture it en passant, ending up on a3 \n <b>Pawn promotion</b> \n If a player advances a pawn to its eighth rank, the pawn is then
+        promoted (converted) to a queen, rook, bishop, or knight of the
+        same color at the choice of the player (a queen is usually
+        chosen). The choice is not limited to previously captured pieces.
+        Hence it is theoretically possible for a player to have up to nine
+        queens or up to ten rooks, bishops, or knights if all of their pawns
+        are promoted. If the desired piece is not available, the player
+        should call the arbiter to provide the piece (Schiller 2003:17–
+        19). \n <b>Check</b> \n A king is in check when it is under attack by at least one enemy
+        piece. A piece unable to move because it would place its own king
+        in check (it is pinned against its own king) may still deliver check
+        to the opposing player.
+        A player may not make any move which places or leaves his king
+        in check. The possible ways to get out of check are:
+        \n \u2022 Move the king to a square where it is not threatened.
+        \n \u2022 Capture the threatening piece (possibly with the king).
+        \n \u2022 Block the check by placing a piece between the king and the
+        opponent's threatening piece If it is not possible to get out of
+        check, the king is checkmated, and the game is over (see the
+        next section). \n In informal games, it is customary to announce "check" when
+        making a move that puts the opponent's king in check. However,
+        in formal competitions check is rarely announced.</string>
+
+    <string name="rules_ppt_presentation_title">POWER POINT PRESENTATION</string>
+    <string name="ppt_topics">A) Physical Activity, Well-ness, and Lifestyle \n B) Obesity and Nutrition</string>
+    <string name="rules_ppt_presentation">\n \u2022 This Competition is open for all college student of our Samstha
+        \n \u2022 This is entirely an \'Individual Event \'. Hence only one
+        Participant per entry will make presentation.
+        \n \u2022 Participant is required to prepare their presentation using MS
+        Power Point 2007.
+        \n \u2022 Participants are required to submit their presentation in the
+        form of CD latest by 4th January 2018 to Mrs Mangal Temgire.
+        Outstation participants should submit the PPT on the day of
+        competition or send via email on mangalt431@gmail.com and
+        confirm. \n \u2022 Each participant will be given 7 minutes. At the end of 5
+        minutes warning bell will ring. After this bell, the presentation
+        should end on or before 7 minutes.
+        \n \u2022 Participant will be judged based on criteria like:
+        \n 1) Content (Colours used, Font type and size, Layout etc.)
+        \n 2) Flow of Presentation.
+        \n 3) Confidence level of the Participant.
+        \n 4) Time Management.
+        \n 5) Communication Skill.
+        \n 6) Presentation Skill.
+        \nEach Criterion will carry 10 marks. Hence Total Marks for this are
+        60.
+        \n \u2022 Participant should be present at the Venue at 09.00 am sharp.
+        The event will begin at 09.20 am. Event will be cancelled, in case
+        total numbers of participant is less than (03) three. Any request
+        by late comers will not be entertained.
+        \n \u2022 Participant will have to make presentation as per their turn in
+        draw.</string>
+    <string name="rules_cricket_title"><b>Cricket Rules</b></string>
+    <string name="rules_cricket">\u2022 Five over match.
+        \n \u2022 Wide ball and no ball rules: according to the one-day match.
+        \n \u2022 Dead ball double bounce ball will be re-bowled.
+        \n \u2022 Run cannot be given against over throw.
+        \n \u2022 One Over by One Bowler only.
+        \n \u2022 No LBW.</string>
+    <string name="rules_suryanamskar_title"><b>Suryanamaskar</b></string>
+    <string name="rules_suryanamaskar">\u2022 Min. 3 students from each college. Max 6
+        \n \u2022  More than 1 team can participate from each college.
+        \n \u2022  Each college must perform immediately after
+        \n Suryanamaskar (College can change the participants.)
+        \n \u2022  Each college team must perform 4 compulsory Asanas
+        by lottery system.
+        \n \u2022  And 2 asanasas per their liking from the given list.
+        \n \u2022  10 marks for each Asana, the judges will mark out of
+        60.
+        \n \u2022 Evaluation will be based as follows
+            \n (1) Starting Position: 10
+            \n (2) Flexibility &amp; Capacity: 10
+            \n (3) Accuracy in position &amp; Breathing: 20
+            \n (4) Team Presentation &amp; Personality: 10
+            \n (5) Judge’s Opinion: 10
+            \n (6) Total Marks :60</string>
+    <string name="rules_yogasana_title">Yogasana</string>
+    <string name="rules_yogasana">\u2022 Min. 3 students from each college. Max 6
+            \n \u2022 More than 1 team can participate from each college.
+            \n \u2022 Each college must perform immediately after
+            Suryanamaskar (College can change the participants.)
+            \n \u2022 Each college team must perform 4 compulsory Asanas
+            by lottery system.
+            \n \u2022 And 2 asanasas per their liking from the given list.
+            \n \u2022 10 marks for each Asana, the judges will mark out of
+            60.
+            \n \u2022 Evaluation will be based as follows:
+            \n (1) Starting Position: 2
+            \n (2) Capacity &amp; Comfort: 2
+            \n (3) Final Position: 3
+            \n (4) Team Presentation: 1
+            \n (5) Judge’s Opinion: 2
+            \n (6) Total Marks: 10</string>
+
+    <string name="damini_event">Events\' Schedule</string>
+
+
 
     <string-array name="colleges_list">
         <item>CCOEW</item>

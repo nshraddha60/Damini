@@ -6,18 +6,22 @@
     android:layout_height="match_parent"
     tools:context="shraddha.com.daminisportsapp.EventActivity">
 
+
     <TextView
-        android:id="@+id/under_construction"
+        android:id="@+id/damini_schedule_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/under_construction"
-        android:textSize="40dp"
-        android:textStyle="bold"
-        android:textAlignment="center"
-        android:textColor="#3594A2"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="228dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="213dp" />
+        android:layout_marginTop="31dp"
+        android:text="@string/damini_event"
+        android:textStyle="bold"
+        android:textSize="25dp"/>
+
+    <com.github.barteksc.pdfviewer.PDFView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/pdfViewer"/>
+
+
 </RelativeLayout>
