@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity
                 startActivity(intent);
                 break;
             case R.id.admin_login:
-                intent = new Intent(this, AdminLoginActivity.class);
+                intent = new Intent(this, RulesActivity.class);
                 startActivity(intent);
                 break;
             case R.id.about_damini:
